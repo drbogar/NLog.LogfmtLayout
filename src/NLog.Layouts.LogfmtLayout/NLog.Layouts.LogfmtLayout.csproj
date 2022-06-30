@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -6,10 +6,15 @@
     <Version>0.1.0</Version>
     <Description>Logfmt layout renderer for NLog</Description>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
-    <PackageTags>NLog, Logfmt, Log, Logging</PackageTags>
+    <PackageTags>NLog;Logfmt;Log;Logging</PackageTags>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/drbogar/NLog.LogfmtLayout</RepositoryUrl>
     <PackageProjectUrl>https://github.com/drbogar/NLog.LogfmtLayout</PackageProjectUrl>
+    <AssemblyName>$(MSBuildProjectName)</AssemblyName>
+    <PackageId>NLog.LogfmtLayout</PackageId>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
@@ -20,6 +25,10 @@
     <None Include="..\..\LICENSE.txt">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
+    </None>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
     </None>
   </ItemGroup>
 
