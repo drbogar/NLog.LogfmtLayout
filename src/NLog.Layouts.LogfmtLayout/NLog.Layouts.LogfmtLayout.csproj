@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Authors>drbogar</Authors>
-    <Version>0.1.0</Version>
+    <Version>0.1.1</Version>
     <Description>Logfmt layout renderer for NLog</Description>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <PackageTags>NLog;Logfmt;Log;Logging</PackageTags>
@@ -11,10 +11,12 @@
     <RepositoryUrl>https://github.com/drbogar/NLog.LogfmtLayout</RepositoryUrl>
     <PackageProjectUrl>https://github.com/drbogar/NLog.LogfmtLayout</PackageProjectUrl>
     <AssemblyName>$(MSBuildProjectName)</AssemblyName>
-    <PackageId>NLog.LogfmtLayout</PackageId>
+    <PackageId>NLog.Layouts.LogfmtLayout</PackageId>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
+    <PackageReleaseNotes>Fix missing context variables issue</PackageReleaseNotes>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Company>drbogar</Company>
+    <Product>NLog.Layouts.LogfmtLayout</Product>
   </PropertyGroup>
 
   <ItemGroup>

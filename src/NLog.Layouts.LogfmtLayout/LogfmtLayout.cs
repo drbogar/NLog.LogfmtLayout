@@ -5,7 +5,6 @@ using NLog.Config;
 namespace NLog.Layouts.LogfmtLayout
 {
     [Layout("LogfmtLayout")]
-    [ThreadAgnostic]
     public class LogfmtLayout : Layout
     {
         private readonly LogfmtLayoutRenderer _renderer = new LogfmtLayoutRenderer();
