@@ -33,7 +33,7 @@ namespace NLog.Layouts.LogfmtLayout.Test
             }
             LogManager.Flush();
 
-            string expectedLogfmtPattern = "ts=\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{7}\\+02:00 level=info msg=\"Hello World!\" log_event_property=\"log event property\" a_scope_property=\"This is a scope property value from the scope context.\" nested_states=\"ScopeNested\" module=TestLogger";
+            string expectedLogfmtPattern = "ts=\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{7}(?:(?:\\+|-)\\d{2}:\\d{2}|Z) level=info msg=\"Hello World!\" log_event_property=\"log event property\" a_scope_property=\"This is a scope property value from the scope context.\" nested_states=\"ScopeNested\" module=TestLogger";
             string actualLogfmt = debugTarget.LastMessage;
             Assert.IsTrue(Regex.IsMatch(actualLogfmt, expectedLogfmtPattern), "Actual Logfmt: " + actualLogfmt);
             Assert.AreEqual(1, debugTarget.Counter, "debugTarget.Counter=" + debugTarget.Counter);
