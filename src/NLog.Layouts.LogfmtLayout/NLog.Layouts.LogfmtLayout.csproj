@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Authors>drbogar</Authors>
-    <Version>0.1.1</Version>
+    <Version>0.1.2</Version>
     <Description>Logfmt layout renderer for NLog</Description>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <PackageTags>NLog;Logfmt;Log;Logging</PackageTags>
@@ -13,7 +13,7 @@
     <AssemblyName>$(MSBuildProjectName)</AssemblyName>
     <PackageId>NLog.Layouts.LogfmtLayout</PackageId>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageReleaseNotes>Fix missing context variables issue</PackageReleaseNotes>
+    <PackageReleaseNotes>Fix the rendering of values containing the equal sign.</PackageReleaseNotes>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Company>drbogar</Company>
     <Product>NLog.Layouts.LogfmtLayout</Product>

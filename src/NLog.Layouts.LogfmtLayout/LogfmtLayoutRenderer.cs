@@ -31,7 +31,7 @@ namespace NLog.Layouts.LogfmtLayout
                 else
                 {
                     valueStr = p.Value.ToString().Replace('\"', '\'');
-                    if (valueStr.Contains(" "))
+                    if (valueStr.Contains(" ") || valueStr.Contains("="))
                     {
                         valueStr = "\"" + valueStr + "\"";
                     }

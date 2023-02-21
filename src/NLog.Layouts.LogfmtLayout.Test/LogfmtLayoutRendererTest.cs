@@ -231,5 +231,39 @@ namespace NLog.Layouts.LogfmtLayout.Test
 
             Assert.AreEqual(expectedLogfmt, renderedLogfmt);
         }
+
+        [TestMethod]
+        public void CanRenderLogfmtWithEqualSignInValue()
+        {
+            LogfmtLayoutRenderer logfmtLayoutRenderer =
+                new LogfmtLayoutRenderer();
+
+            string strWithEqSign = "SGVsbG8gTG9nZm10ISA6KQ==";
+
+            LogEventInfo logEvent = new LogEventInfo
+            {
+                LoggerName = loggerName,
+                Level = logLevel,
+                Message = message,
+                TimeStamp = dateTime,
+                Properties =
+                {
+                    { "str_with_eq_sign", strWithEqSign },
+                }
+            };
+
+            string renderedLogfmt = logfmtLayoutRenderer.Render(logEvent);
+            string expectedDateTime = dateTime.ToString("o");
+            string expectedLogfmt =
+                string.Format(System.Globalization.CultureInfo.InvariantCulture,
+                "ts={0} level={1} msg=\"{2}\" str_with_eq_sign=\"{3}\" module={4}",
+                expectedDateTime,
+                logLevel.ToString().ToLowerInvariant(),
+                message,
+                strWithEqSign,
+                loggerName);
+
+            Assert.AreEqual(expectedLogfmt, renderedLogfmt);
+        }
     }
 }
